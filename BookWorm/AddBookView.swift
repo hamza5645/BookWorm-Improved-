@@ -11,6 +11,7 @@ import SwiftData
 struct AddBookView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var book: [Book]
+    @Environment(\.dismiss) var dismiss
     
     @State private var name = ""
     @State private var author = ""
@@ -37,7 +38,7 @@ struct AddBookView: View {
                             displayedComponents: .date
                         )
                         
-                        Stepper("I have read this bool \(count) time", value: $count, in: 1...9, step: 1)
+                        Stepper("I have read this book \(count) time", value: $count, in: 1...9, step: 1)
                     }
                     Section {
                         RatingView(rating: $rating)
@@ -52,20 +53,30 @@ struct AddBookView: View {
                     let newBook = Book(name: name, author: author, language: language, count: count, thoughts: thoughts, rating: Int16(rating), date: date)
                     
                     modelContext.insert(object: newBook)
+                    dismiss()
                 } label: {
                     Rectangle()
                         .frame(width: 275, height: 75)
                         .cornerRadius(7.5)
-//                        .foregroundColor(validBook ? Color.green : Color.gray)
+                        .foregroundColor(bookIsValid ? Color.blue : Color.gray)
                         .overlay(
                             Text("Save")
                                 .foregroundColor(.primary)
                         )
                 }
+                .disabled(bookIsValid == false)
                 .padding()
                 .navigationTitle("Add Book")
 
             }
+        }
+    }
+    
+    var bookIsValid: Bool {
+        if name.isEmpty {
+            return false
+        } else {
+            return true
         }
     }
 }
