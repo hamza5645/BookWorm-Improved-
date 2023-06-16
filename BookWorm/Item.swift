@@ -9,10 +9,22 @@ import Foundation
 import SwiftData
 
 @Model
-final class Item {
-    var timestamp: Date
+class Book {
+    @Attribute(.unique) var name: String
+    var author: String?
+    var language: String
+    var count: Int
+    var thoughts: String?
+    var rating: Int16
+    var date: Date
     
-    init(timestamp: Date) {
-        self.timestamp = timestamp
+    init (name: String, author: String, language: String, count: Int, thoughts: String, rating: Int16, date: Date) {
+        self.name = name
+        self.author = author
+        self.language = language
+        self.count = count
+        self.thoughts = thoughts
+        self.rating = rating
+        self.date = date
     }
 }

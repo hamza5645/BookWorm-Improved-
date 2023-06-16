@@ -15,6 +15,6 @@ struct BookWormApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Item.self)
+        .modelContainer(for: Book.self)
     }
 }

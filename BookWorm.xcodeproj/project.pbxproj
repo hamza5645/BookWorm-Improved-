@@ -12,6 +12,9 @@
 		2FEED3062A39C029003C748C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FEED3052A39C029003C748C /* Assets.xcassets */; };
 		2FEED3092A39C029003C748C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FEED3082A39C029003C748C /* Preview Assets.xcassets */; };
 		2FEED30B2A39C029003C748C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEED30A2A39C029003C748C /* Item.swift */; };
+		2FEED3142A39C449003C748C /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEED3132A39C449003C748C /* AddBookView.swift */; };
+		2FEED3162A39CF82003C748C /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEED3152A39CF82003C748C /* RatingView.swift */; };
+		2FEED3182A39D122003C748C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEED3172A39D122003C748C /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		2FEED30A2A39C029003C748C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		2FEED30C2A39C029003C748C /* BookWorm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BookWorm.entitlements; sourceTree = "<group>"; };
 		2FEED30D2A39C029003C748C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FEED3132A39C449003C748C /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		2FEED3152A39CF82003C748C /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		2FEED3172A39D122003C748C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,9 @@
 			children = (
 				2FEED3012A39C027003C748C /* BookWormApp.swift */,
 				2FEED3032A39C027003C748C /* ContentView.swift */,
+				2FEED3172A39D122003C748C /* DetailView.swift */,
+				2FEED3132A39C449003C748C /* AddBookView.swift */,
+				2FEED3152A39CF82003C748C /* RatingView.swift */,
 				2FEED3052A39C029003C748C /* Assets.xcassets */,
 				2FEED30A2A39C029003C748C /* Item.swift */,
 				2FEED30C2A39C029003C748C /* BookWorm.entitlements */,
@@ -145,8 +154,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FEED3042A39C027003C748C /* ContentView.swift in Sources */,
+				2FEED3182A39D122003C748C /* DetailView.swift in Sources */,
 				2FEED30B2A39C029003C748C /* Item.swift in Sources */,
 				2FEED3022A39C027003C748C /* BookWormApp.swift in Sources */,
+				2FEED3162A39CF82003C748C /* RatingView.swift in Sources */,
+				2FEED3142A39C449003C748C /* AddBookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
