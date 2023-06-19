@@ -6,13 +6,26 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct DetailView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query private var books: [Book]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ForEach(books) { book in
+                VStack {
+                    Text("\(book.name)")
+                }
+            }
+//            .navigationTitle("\(book.name)")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
 #Preview {
     DetailView()
+        .modelContainer(for: Book.self, inMemory: true)
 }

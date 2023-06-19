@@ -27,6 +27,7 @@ struct ContentView: View {
                 }
                 .onDelete(perform: deleteItems)
             }
+            .navigationTitle("BookWorm")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
@@ -43,7 +44,6 @@ struct ContentView: View {
                 AddBookView()
             }
         }
-        .navigationTitle("BookWorm")
     }
 
     private func deleteItems(offsets: IndexSet) {
