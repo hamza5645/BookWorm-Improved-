@@ -21,19 +21,29 @@ struct DetailView: View {
     
     var body: some View {
         NavigationView {
-            ForEach(books) { book in
-                VStack {
-                    Text("Book name : \(book.name)")
-                    Text("Book author : \(book.author)")
-                    Text("Book language : \(book.language)")
-                    Text("How many times you have read this book : \(book.count)")
-                    Text("Your thoughts on this book : \(book.thoughts)")
-                    Text("\(book.rating)")
-                    Text("\(book.date, formatter: dateFormatter)")
+            ScrollView {
+                ForEach(books) { book in
+                    VStack(alignment: .leading) {
+                        Text("Book name : \(book.name)")
+                            .padding()
+                        Text("Book author : \(book.author)")
+                            .padding()
+                        Text("Book language : \(book.language)")
+                            .padding()
+                        Text("How many times you have read this book : \(book.count)")
+                            .padding()
+                        Text("Your thoughts on this book : \(book.thoughts)")
+                        
+                            .padding()
+                        Text("Your rating for this book : \(book.rating)")
+                            .padding()
+                        Text("When did you read this book : \(book.date, formatter: dateFormatter)")
+                            .padding()
+                    }
                 }
+                //            .navigationTitle("\(book.name)")
+                .navigationBarTitleDisplayMode(.inline)
             }
-//            .navigationTitle("\(book.name)")
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
