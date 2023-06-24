@@ -11,10 +11,10 @@ import SwiftData
 @Model
 class Book {
     @Attribute(.unique) var name: String
-    var author: String?
+    var author: String
     var language: String
     var count: Int
-    var thoughts: String?
+    var thoughts: String
     var rating: Int16
     var date: Date
     
